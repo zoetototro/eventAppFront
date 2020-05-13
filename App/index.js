@@ -5,20 +5,15 @@ import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { createDrawerNavigator } from "@react-navigation/drawer";
 
 import { AuthContext } from "./context";
-import {
-  SignIn,
-  CreateAccount,
-  Search,
-  Details,
-  Search2,
-  Splash,
-} from "./Screens";
+import { SignIn, Search, Details, Search2, Splash } from "./Screens";
 
 import { Home } from "./screens/home";
 import { Message } from "./screens/message";
 import { Notification } from "./screens/notification";
 import { Profile } from "./screens/profile";
 import { Timeline } from "./screens/timeline";
+import { CreateAccount } from "./screens/createAccount";
+import * as Font from "expo-font";
 
 const AuthStack = createStackNavigator();
 const Tabs = createBottomTabNavigator();
