@@ -1,17 +1,10 @@
 import React from "react";
-import { View, Text, StyleSheet, Button } from "react-native";
+import { View, Text, StyleSheet, Button, Image } from "react-native";
+import { vw } from "react-native-expo-viewport-units";
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: "center",
-    alignItems: "center",
-  },
-  button: {
-    paddingHorizontal: 20,
-    paddingVertical: 10,
-    marginVertical: 10,
-    borderRadius: 5,
   },
 });
 
@@ -21,6 +14,11 @@ const ScreenContainer = ({ children }) => (
 
 export const Timeline = ({ navigation }) => (
   <ScreenContainer>
-    <Button title="Drawer" onPress={() => navigation.toggleDrawer()} />
+    <Image
+      source={{
+        uri: "https://source.unsplash.com/user/chrisjoelcampbell",
+      }}
+      style={{ maxHeight: 320, width: null, flex: 1 }}
+    />
   </ScreenContainer>
 );

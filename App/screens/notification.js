@@ -1,11 +1,22 @@
 import React from "react";
-import { View, Text, StyleSheet, Button } from "react-native";
+import { View, StyleSheet } from "react-native";
+import {
+  Container,
+  Header,
+  Content,
+  List,
+  ListItem,
+  Left,
+  Body,
+  Right,
+  Button,
+  Thumbnail,
+  Text,
+} from "native-base";
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: "center",
-    alignItems: "center",
   },
   button: {
     paddingHorizontal: 20,
@@ -21,7 +32,23 @@ const ScreenContainer = ({ children }) => (
 
 export const Notification = ({ navigation }) => (
   <ScreenContainer>
-    <Text>Message Screen</Text>
-    <Button title="Drawer" onPress={() => navigation.toggleDrawer()} />
+    <Content>
+      <List>
+        <ListItem avatar>
+          <Left>
+            <Thumbnail
+              source={{
+                uri: "https://source.unsplash.com/user/chrisjoelcampbell",
+              }}
+            />
+          </Left>
+          <Body>
+            <Button>
+              <Text>マッチする</Text>
+            </Button>
+          </Body>
+        </ListItem>
+      </List>
+    </Content>
   </ScreenContainer>
 );

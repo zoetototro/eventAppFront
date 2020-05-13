@@ -1,12 +1,18 @@
 import React from "react";
-import { View, Text, StyleSheet, Button } from "react-native";
-
+import { View, StyleSheet } from "react-native";
+import {
+  Container,
+  Header,
+  Content,
+  List,
+  ListItem,
+  Left,
+  Body,
+  Right,
+  Thumbnail,
+  Text,
+} from "native-base";
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: "center",
-    alignItems: "center",
-  },
   button: {
     paddingHorizontal: 20,
     paddingVertical: 10,
@@ -15,13 +21,27 @@ const styles = StyleSheet.create({
   },
 });
 
-const ScreenContainer = ({ children }) => (
-  <View style={styles.container}>{children}</View>
-);
-
 export const Message = ({ navigation }) => (
-  <ScreenContainer>
-    <Text>Message Screen</Text>
-    <Button title="Drawer" onPress={() => navigation.toggleDrawer()} />
-  </ScreenContainer>
+  <Container>
+    <Content>
+      <List>
+        <ListItem avatar>
+          <Left>
+            <Thumbnail
+              source={{
+                uri: "https://source.unsplash.com/user/chrisjoelcampbell",
+              }}
+            />
+          </Left>
+          <Body>
+            <Text>Kumar Pratik</Text>
+            <Text note>Doing what you like will always keep you happy . .</Text>
+          </Body>
+          <Right>
+            <Text note>3:43 pm</Text>
+          </Right>
+        </ListItem>
+      </List>
+    </Content>
+  </Container>
 );

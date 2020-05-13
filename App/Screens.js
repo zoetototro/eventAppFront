@@ -55,9 +55,8 @@ export const Profile = ({ navigation }) => {
 
   return (
     <ScreenContainer>
-      <Text>Profile Screen</Text>
-      <Button title="Drawer" onPress={() => navigation.toggleDrawer()} />
-      <Button title="Sign Out" onPress={() => signOut()} />
+      <Button title="メニュー" onPress={() => navigation.toggleDrawer()} />
+      <Button title="ログアウト" onPress={() => signOut()} />
     </ScreenContainer>
   );
 };
@@ -73,10 +72,9 @@ export const SignIn = ({ navigation }) => {
 
   return (
     <ScreenContainer>
-      <Text>Sign In Screen</Text>
-      <Button title="Sign In" onPress={() => signIn()} />
+      <Button title="ログイン" onPress={() => signIn()} />
       <Button
-        title="Create Account"
+        title="新規会員登録"
         onPress={() => navigation.push("CreateAccount")}
       />
     </ScreenContainer>

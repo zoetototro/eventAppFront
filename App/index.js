@@ -29,12 +29,12 @@ const AuthStackScreen = () => (
     <AuthStack.Screen
       name="SignIn"
       component={SignIn}
-      options={{ title: "Sign In" }}
+      options={{ title: "Match" }}
     />
     <AuthStack.Screen
       name="CreateAccount"
       component={CreateAccount}
-      options={{ title: "Create Account" }}
+      options={{ title: "Match" }}
     />
   </AuthStack.Navigator>
 );
@@ -93,7 +93,7 @@ const SearchStackScreen = () => (
 
 const ProfileStackScreen = () => (
   <ProfileStack.Navigator>
-    <ProfileStack.Screen name="Profile" component={Profile} />
+    <ProfileStack.Screen name="あなたのプロフィール" component={Profile} />
   </ProfileStack.Navigator>
 );
 
