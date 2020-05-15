@@ -13,6 +13,7 @@ import { Notification } from "./screens/notification";
 import { Profile } from "./screens/profile";
 import { Timeline } from "./screens/timeline";
 import { CreateAccount } from "./screens/createAccount";
+import { EditProfile } from "./screens/editProfile";
 import * as Font from "expo-font";
 
 const AuthStack = createStackNavigator();
@@ -163,6 +164,14 @@ export default () => {
     setTimeout(() => {
       setIsLoading(false);
     }, 1000);
+  }, []);
+
+  React.useEffect(async () => {
+    await Font.loadAsync({
+      Roboto: require("native-base/Fonts/Roboto.ttf"),
+      Roboto_medium: require("native-base/Fonts/Roboto_medium.ttf"),
+      ...Ionicons.font,
+    });
   }, []);
 
   if (isLoading) {
